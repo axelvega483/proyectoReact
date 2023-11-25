@@ -1,38 +1,32 @@
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Cargando } from './Cargando';
+import "../css/SeccionProductos.css";
+import { Link } from 'react-router-dom';
+export const Productos = (props) => {
 
-export const Productos = () => {
-
-  const [photos, setPhotos] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchApi = async () => {
-    setLoading(true);
-    await fetch("https://jsonplaceholder.typicode.com/photos")
-      .then(response => response.json())
-      .then(data => {
-        setPhotos(data);
-      })
-      .finally(() => setLoading(false))
-  }
-
-
-  useEffect(() => {
-    fetchApi()
-  }, []);
+  //const [photos, setPhotos] = useState([]);
 
   return (
     <>
       <div className='productos'>
         <h1>Productos</h1>
-        {loading && <Cargando></Cargando>}
         <section className='seccion-productos'>
           {
-            photos.map((photo) => {
+            props.photos.map((photo) => {
               return <article key={photo.id}>
-                <img loading='eager' src={photo.url} alt={photo.title} />
-                <h2>{photo.title}</h2>
+                <img
+                  src={photo.url}
+                  alt="imagen"
+                />
+                <cite>Cactus</cite>
+                <h4>Cactus Cebra</h4>
+                <p>$5.020,00</p>
+                <button onClick={() => {
+                  props.setCarrito(props.carrito + 1)
+                }} className='btn btn-sm btn-primary'>Agregar</button>
               </article>
+
+
             })
           }
         </section>
