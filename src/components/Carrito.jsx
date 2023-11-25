@@ -1,39 +1,24 @@
 import "../css/Carrito.css";
-export const Carrito = ({ carrito }) => {
+export const Carrito = (props) => {
   return (
     <div className='carrito'>
       <div className="carrito-section">
-        <div className="carrito-article">
-          <img src="src/assets/img/logo.png" alt="" />
-          <div>
 
-            <h3>Cactus</h3>
-            <p>Cantidad: 3</p>
-            <p>Precio: $5.500</p>
-            <p>Subtotal: $10.200</p>
-          </div>
-        </div>
-        <div className="carrito-article">
-          <img src="src/assets/img/logo.png" alt="" />
-          <div>
 
-            <h3>Cactus</h3>
-            <p>Cantidad: 3</p>
-            <p>Precio: $5.500</p>
-            <p>Subtotal: $10.200</p>
-          </div>
-        </div>
-        <div className="carrito-article">
-          <img src="src/assets/img/logo.png" alt="" />
-          <div>
+        {
+          props.carrito.map((planta) => {
+            return <div className="carrito-article" key={planta.id}>
+              <img src={planta.img} alt="" />
+              <div>
 
-            <h3>Cactus</h3>
-            <p>Cantidad: 3</p>
-            <p>Precio: $5.500</p>
-            <p>Subtotal: $10.200</p>
-          </div>
-        </div>
-
+                <h3>{planta.nombre}</h3>
+                <p>Cantidad: 3</p>
+                <p>Precio: {planta.precio}</p>
+                <p>Subtotal: $10.200</p>
+              </div>
+            </div>
+          })
+        }
       </div>
 
       <div className="pie-carrito">

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Cargando } from './Cargando';
 import "../css/SeccionProductos.css";
 import { Link } from 'react-router-dom';
-export const Productos = (props) => {
+export const Productos = ({ plantas, setPlantas, carrito, setCarrito }) => {
 
   //const [photos, setPhotos] = useState([]);
 
@@ -12,17 +12,17 @@ export const Productos = (props) => {
         <h1>Productos</h1>
         <section className='seccion-productos'>
           {
-            props.photos.map((photo) => {
-              return <article key={photo.id}>
+            plantas.map((planta) => {
+              return <article key={planta.id}>
                 <img
-                  src={photo.url}
+                  src={planta.img}
                   alt="imagen"
                 />
-                <cite>Cactus</cite>
-                <h4>Cactus Cebra</h4>
-                <p>$5.020,00</p>
+                <cite>{planta.categoria}</cite>
+                <h4>{planta.nombre}</h4>
+                <p>{planta.precio}</p>
                 <button onClick={() => {
-                  props.setCarrito(props.carrito + 1)
+                  setCarrito([...carrito, planta])
                 }} className='btn btn-sm btn-primary'>Agregar</button>
               </article>
 

@@ -6,8 +6,6 @@ import "../css/Menu.css";
 import { Link } from 'react-router-dom';
 export const Menu = ({ carrito }) => {
 
-  console.log(carrito.lengh);
-
   return (
     <Navbar expand="lg" className="bloque-menu" data-bs-theme="light">
       <Container>
@@ -17,7 +15,7 @@ export const Menu = ({ carrito }) => {
           <Nav className="me-auto items">
             <Link to={"/"}>Inicio</Link>
             <Link to={"/productos"}>Productos</Link>
-            <Link to={"/carrito"}>Carrito <span>{carrito}</span></Link>
+            <Link to={"/carrito"}>Carrito <span>{carrito.length}</span></Link>
             <Link to={"/nosotros"}>Nosotros</Link>
           </Nav>
         </Navbar.Collapse>
