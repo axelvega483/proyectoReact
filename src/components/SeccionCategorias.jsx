@@ -5,7 +5,7 @@ export const SeccionCategorias = () => {
   const categorias = [{
     id: 1,
     nombre: "Exterior",
-    img: "src/assets/img/Plantas/cactus _cebra.jpg"
+    img: "src/assets/img/Plantas/cactus_cebra.jpg"
 
   },
   {
