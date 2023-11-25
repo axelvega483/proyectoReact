@@ -5,18 +5,18 @@ export const SeccionCategorias = () => {
   const categorias = [{
     id: 1,
     nombre: "Exterior",
-    img: "src/assets/img/Plantas/cactus cebra n6.jpg"
+    img: "src/assets/img/Plantas/cactus _cebra.jpg"
 
   },
   {
     id: 2,
     nombre: "Interoir",
-    img:"src/assets/img/Plantas/singonio t12.jpg"
+    img:"src/assets/img/Plantas/singonio.jpg"
   },
   {
     id: 3,
     nombre: "Accesorios",
-    artesania:"src/assets/img/Artesanias/IMG_20210715_115738.jpg"
+    img:"src/assets/img/Artesanias/IMG_20210715_115738.jpg"
 
   }];
   return (
