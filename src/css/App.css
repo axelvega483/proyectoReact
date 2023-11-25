@@ -1,0 +1,66 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: auto;
+}
+
+section article{
+    width: 25%;
+    margin: 0px auto;
+    max-width: 200px;
+}
+
+section article img{
+    width: 100%;
+}
+
+section article h2{
+    width: 100%;
+    font-size: .8em;
+}
+
+
+.section-espera{
+    background-color: white;
+
+}
+
+.section-espera article{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-espera div{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    animation: opacidad 1s alternate infinite;
+}
+
+.section-espera article h3{
+    background-color: rgba(0, 0, 0, 0.09);
+    width: 100%;
+    height: 50px;
+    animation: opacidad 1s alternate infinite;
+}
+
+@keyframes  opacidad{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 50%;
+    }
+}
