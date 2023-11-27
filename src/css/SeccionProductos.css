@@ -28,6 +28,7 @@ section article {
   text-align: end;
   font-size: .9em;
   margin-bottom: 10%;
+  height: 100%;
 }
 
 section article h4 {
@@ -51,7 +52,6 @@ section article .btn {
 }
 
 section article:hover img {
-  cursor: pointer;
   transition: .4s ease all;
   box-shadow: 0 0 5px rgba(4, 129, 10, 0.6);
 }

@@ -1,9 +1,7 @@
-import { Menu } from "./Menu";
 import "../css/Inicio.css";
 
 import { SeccionCategorias } from "./SeccionCategorias";
 import { SeccionDestacados } from "./SeccionDestacados";
-import { Outlet } from "react-router-dom";
 const Banner = (props) => {
   return (
     <div className="banner">
@@ -30,7 +28,6 @@ export const Inicio = () => {
 
       <Banner p1="Transforma tu entorno" p2="Con nuestras hermosas plantas" ></Banner>
       <SeccionDestacados></SeccionDestacados>
-      <Outlet></Outlet>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import imagen from "../assets/img/cactus_cebra_n6.jpg";
 import "../css/SeccionDestacados.css";
 export const SeccionDestacados = () => {
 
