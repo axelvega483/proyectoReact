@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import "../css/SeccionProductos.css";
 
 
 export const Productos = () => {
-
+  const [carrito, setCarrito] = useState([]);
   const [photos, setPhotos] = useState([
     {
       id: 1,
@@ -28,7 +29,7 @@ export const Productos = () => {
     {
       id: 4,
       categoria: "Exterior",
-      img: "src/assets/img/Plantas/cactus _cebra.jpg",
+      img: "src/assets/img/Plantas/cactus_cebra.jpg",
       nombre: "Cactus Cebra",
       precio: "$4.500,00",
     },
@@ -133,25 +134,30 @@ export const Productos = () => {
 
   ]);
 
-
-
   return (
     <>
       <div className='productos'>
         <h1>Productos</h1>
 
         <section className='seccion-productos'>
-          {
-            photos.map((photo) => {
-              return <article key={photo.id}>
-                <h3>{photo.categoria}</h3>
-                <img src={photo.img} alt={photo.nombre} />
-                <p>{photo.precio}</p>
-              </article>
-            })
-          }
+          {photos.map((photo) => (
+            <article key={photo.id}>
+              <h3>{photo.categoria}</h3>
+              <img src={photo.img} alt={photo.nombre} />
+              <p>{photo.precio}</p>
+              <button
+                onClick={() => {
+                  setCarrito([...carrito, photo]);
+                }}
+                className='btn btn-sm btn-primary'
+              >
+                Agregar
+              </button>
+            </article>
+          ))}
         </section>
       </div>
+      
     </>
-  )
+  );
 }

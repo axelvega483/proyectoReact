@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Inicio></Inicio>} ></Route>
         <Route path='/productos' element={<Productos></Productos>} ></Route>
-        <Route path='/carrito' element={<Carrito></Carrito>} ></Route>
+        <Route path='/carrito' element={<Carrito></Carrito>} />
         <Route path='/nosotros' element={<Nosotros></Nosotros>} ></Route>
 
       </Routes>
@@ -24,4 +24,5 @@ function App() {
   )
 }
 
-export default App
+
+export default App;
