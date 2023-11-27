@@ -1,6 +1,6 @@
 
 import "../css/Carrito.css";
-export const Carrito = ({ carrito }) => {
+export const Carrito = (props) => {
   const calcularSubtotal = (planta) => {
     const precioNumerico = parseFloat(planta.precio.replace('$', '').replace(',', ''));
     const cantidad = planta.cantidad || 1; 
@@ -12,7 +12,7 @@ export const Carrito = ({ carrito }) => {
       <div className="carrito-section">
 
 
-      {carrito && carrito.map((planta) => (
+      {props.Carrito && props.Carrito.map((planta) => (
           <div className="carrito-article" key={planta.id}>
             <img src={planta.img} alt={planta.nombre} />
             <div>
