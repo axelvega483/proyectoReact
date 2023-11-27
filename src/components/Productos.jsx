@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import "../css/SeccionProductos.css"
 
 export const Productos = () => {
   const [carrito, setCarrito]= useState([])
@@ -28,7 +28,7 @@ export const Productos = () => {
     {
       id: 4,
       categoria: "Exterior",
-      img: "src/assets/img/Plantas/cactus _cebra.jpg",
+      img: "src/assets/img/Plantas/cactus_cebra.jpg",
       nombre: "Cactus Cebra",
       precio: "$4.500,00",
     },

@@ -6,7 +6,7 @@ export const Carrito = (props) => {
 
 
         {
-          props.carrito.map((planta) => {
+          props.carrito && props.carrito.map((planta) => {
             return <div className="carrito-article" key={planta.id}>
               <img src={planta.img} alt="" />
               <div>
