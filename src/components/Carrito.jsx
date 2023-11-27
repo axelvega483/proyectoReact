@@ -1,31 +1,52 @@
+import { useState } from "react";
 import "../css/Carrito.css";
+
 export const Carrito = (props) => {
+
+  const [total, setTotal] = useState(parseFloat(1040).toFixed(2));
+
+
+  function carritoVacio() {
+    if (props.Carrito < 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   return (
     <div className='carrito'>
       <div className="carrito-section">
 
+        {carritoVacio() ? <p className="text-center">Carrito Vacio</p> : (props.carrito && props.carrito.map((planta) => {
+          return <div className="carrito-article" key={planta.id}>
+            <img src={planta.img} alt={planta.nombre} />
+            <div>
 
-        {
-          props.carrito && props.carrito.map((planta) => {
-            return <div className="carrito-article" key={planta.id}>
-              <img src={planta.img} alt="" />
-              <div>
-
-                <h3>{planta.nombre}</h3>
-                <p>Cantidad: 3</p>
-                <p>Precio: {planta.precio}</p>
-                <p>Subtotal: $10.200</p>
-              </div>
+              <h3>{planta.nombre}</h3>
+              <p>Cantidad: 1</p>
+              <p>Precio:$ {planta.precio}</p>
+              <p>Subtotal: $ {planta.precio}</p>
             </div>
-          })
-        }
+          </div>
+        }))}
+
+
+
+
+
+
       </div>
 
-      <div className="pie-carrito">
+      {carritoVacio() ? "" : (
+        <div className="pie-carrito">
 
-        <p>Total $2222</p>
-        <button className="btn btn-success">Comprar</button>
-      </div>
+          <p>Total $ {total}</p>
+          <button className="btn btn-success">Comprar</button>
+        </div>
+      )}
+
+
     </div>
   )
 }
