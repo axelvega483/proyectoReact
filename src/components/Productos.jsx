@@ -148,7 +148,7 @@ export const Productos = () => {
                 <img src={photo.img} alt={photo.nombre} />
                 <p>{photo.precio}</p>
                 <button onClick={() => {
-                  setCarrito([...carrito, planta])
+                  setCarrito([...carrito, photo])
                 }} className='btn btn-sm btn-primary'>Agregar</button>
               </article>
             })
