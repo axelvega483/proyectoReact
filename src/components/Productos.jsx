@@ -2,7 +2,7 @@ import { useState } from 'react'
 import "../css/SeccionProductos.css"
 
 export const Productos = () => {
-  const [carrito, setCarrito]= useState([])
+  const [carrito, setCarrito] = useState([])
   const [photos, setPhotos] = useState([
     {
       id: 1,
@@ -139,7 +139,6 @@ export const Productos = () => {
     <>
       <div className='productos'>
         <h1>Productos</h1>
-        
         <section className='seccion-productos'>
           {
             photos.map((photo) => {
@@ -155,7 +154,7 @@ export const Productos = () => {
           }
         </section>
       </div>
-      
+
     </>
   );
 }

@@ -6,7 +6,6 @@ import "../css/Menu.css";
 import { Link } from 'react-router-dom';
 export const Menu = ({ carrito }) => {
 
-  console.log(carrito.lengh);
 
   return (
     <Navbar expand="lg" className="bloque-menu" data-bs-theme="light">
