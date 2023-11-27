@@ -20,7 +20,7 @@ export const Productos = ({ plantas, setPlantas, carrito, setCarrito }) => {
                 />
                 <cite>{planta.categoria}</cite>
                 <h4>{planta.nombre}</h4>
-                <p>{planta.precio}</p>
+                <p>$ {planta.precio}</p>
                 <button onClick={() => {
                   setCarrito([...carrito, planta])
                 }} className='btn btn-sm btn-primary'>Agregar</button>
