@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 export const Productos = () => {
-
+  const [carrito, setCarrito]= useState([])
   const [photos, setPhotos] = useState([
     {
       id: 1,
@@ -139,7 +139,7 @@ export const Productos = () => {
     <>
       <div className='productos'>
         <h1>Productos</h1>
-        {loading && <Cargando></Cargando>}
+        
         <section className='seccion-productos'>
           {
             photos.map((photo) => {
@@ -147,6 +147,9 @@ export const Productos = () => {
                 <h3>{photo.categoria}</h3>
                 <img src={photo.img} alt={photo.nombre} />
                 <p>{photo.precio}</p>
+                <button onClick={() => {
+                  setCarrito([...carrito, planta])
+                }} className='btn btn-sm btn-primary'>Agregar</button>
               </article>
             })
           }
